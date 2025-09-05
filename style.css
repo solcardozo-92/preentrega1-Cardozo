@@ -1,0 +1,48 @@
+
+
+/*Estilos Generales*/
+*{font-family: "Oswald", sans-serif}
+
+/*Header*/
+index-header{ 
+justify-content: space-between;
+align-items: center;
+padding:0;
+position: fixed;
+top: 0;
+left:0;
+right: 0;z-index:1000
+}
+.logo{display:block;
+    height: 300px;
+    width: ;: 60;;
+margin-right:0px;
+margin-top: 0%;}
+
+.nav{display:flex}
+
+h1{color: rgb(245, 133, 211)}
+ul{
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: auto;
+list-style-type:none;
+padding-left:0;
+gap: 20px;
+justify-content: right
+}
+li{display:inline-block;
+background-color: rgb(208, 29, 231);
+color:rgb(241, 240, 238);
+padding:10px 20px;
+border-radius: 5px;
+}
+form{display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+input[type="submit"]{width: 120px; height: 60px}
+
+/*Main*/
+/*Footer*/

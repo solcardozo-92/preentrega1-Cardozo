@@ -12,18 +12,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOME</title>
    
-
-<header class="d-flex align-items-center">
-  <!-- Logo sticky -->
-  <div class="logo-container">
-    <a href="./index.html">
-      <img src="assets/imagenes/Rose Round Trendy Monogram Logo.png" alt="logo Sol Cardozo" class="logo">
-    </a>
-  </div>
-
-  <!-- Navbar que se mueve -->
-  <nav class="navbar navbar-expand-lg bg-light flex-grow-1">
+<body>
+<header>
+  <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
+      <!-- Logo como navbar-brand -->
+      <a class="navbar-brand" href="../index.html">
+  <img src="/assets/imagenes/Rose Round Trendy Monogram Logo.png" 
+       alt="logo Sol Cardozo" class="logo">
+</a>
+
       <!-- Botón hamburguesa -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,7 +30,7 @@
 
       <!-- Links -->
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
+        <ul class="navbar-nav ms-auto"> <!-- ms-auto solo aquí para desktop -->
           <li class="nav-item"><a class="nav-link active" href="./index.html">HOME</a></li>
           <li class="nav-item"><a class="nav-link" href="./pages/reel.html">REEL</a></li>
           <li class="nav-item"><a class="nav-link" href="./pages/work.html">WORK</a></li>

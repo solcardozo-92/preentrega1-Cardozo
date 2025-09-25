@@ -14,17 +14,16 @@
     
 </head>
 
-<header class="d-flex align-items-center">
-  <!-- Logo sticky -->
-  <div class="logo-container">
-    <a href="./index.html">
-     <img src="../assets/imagenes/Rose Round Trendy Monogram Logo.png" alt="logo Sol Cardozo" class="logo">
-    </a>
-  </div>
-
-  <!-- Navbar que se mueve -->
-  <nav class="navbar navbar-expand-lg bg-light flex-grow-1">
+<body class="pages">
+  <header>
+  <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
+      <!-- Logo como navbar-brand -->
+     <a class="navbar-brand" href="../index.html">
+  <img src="../assets/imagenes/Rose Round Trendy Monogram Logo.png" 
+       alt="logo Sol Cardozo" class="logo">
+</a>
+
       <!-- Botón hamburguesa -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,7 +33,9 @@
       <!-- Links -->
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-         <li class="nav-item"><a class="nav-link active" href="../index.html">HOME</a></li>
+          <!-- HOME debe ir al index, por eso ../ -->
+          <li class="nav-item"><a class="nav-link" href="../index.html">HOME</a></li>
+          <!-- Estas páginas están en la misma carpeta /pages -->
           <li class="nav-item"><a class="nav-link" href="reel.html">REEL</a></li>
           <li class="nav-item"><a class="nav-link" href="work.html">WORK</a></li>
           <li class="nav-item"><a class="nav-link" href="bio.html">BIO</a></li>
@@ -44,10 +45,6 @@
     </div>
   </nav>
 </header>
-
-
-<body>
-  
   <section style="max-width: 800px; margin: auto; padding: 20px; font-family: Arial, sans-serif;">
     <h1>About me</h1>
     <img src="../assets/imagenes/cv.jpeg" alt="Sol Cardozo" style="width: 100%; max-width: 300px; border-radius: 10px; margin-bottom: 20px;">

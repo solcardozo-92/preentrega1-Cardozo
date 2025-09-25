@@ -18,17 +18,17 @@
  
 </head>
 
-<header class="d-flex align-items-center">
-  <!-- Logo sticky -->
-  <div class="logo-container">
-    <a href="./index.html">
-      <img src="../assets/imagenes/Rose Round Trendy Monogram Logo.png" alt="logo Sol Cardozo" class="logo">
-    </a>
-  </div>
 
-  <!-- Navbar que se mueve -->
-  <nav class="navbar navbar-expand-lg bg-light flex-grow-1">
+   <body class="pages">
+    <header>
+  <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
+      <!-- Logo como navbar-brand -->
+      <a class="navbar-brand" href="../index.html">
+  <img src="../assets/imagenes/Rose Round Trendy Monogram Logo.png" 
+       alt="logo Sol Cardozo" class="logo">
+</a>
+
       <!-- Botón hamburguesa -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,7 +38,9 @@
       <!-- Links -->
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="../index.html">HOME</a></li>
+          <!-- HOME debe ir al index, por eso ../ -->
+          <li class="nav-item"><a class="nav-link" href="../index.html">HOME</a></li>
+          <!-- Estas páginas están en la misma carpeta /pages -->
           <li class="nav-item"><a class="nav-link" href="reel.html">REEL</a></li>
           <li class="nav-item"><a class="nav-link" href="work.html">WORK</a></li>
           <li class="nav-item"><a class="nav-link" href="bio.html">BIO</a></li>
@@ -48,26 +50,33 @@
     </div>
   </nav>
 </header>
-   <body>
     
-     <h2>Contact me</h2>
-    <form action="subnmit" method="post" >
-<label for="Name">Name</label>
-<input type="text" name="Name" id="Name">
-<label for="Lastname">Lastname</label>
-<input type="text" name="Lastname" id="Lastname">
-<br>
-<label for="Contact information">Contact information</label>
-<input type="text" name="Contact information" id="Contact information">
-<br>
-<label for="Message">Message</label>
-<textarea name="Message" id="Message"></textarea>
-<br>
-<!--aun este submit envia a una pagina inexistente supuse que aun no era necesario completar este paso-->
-<input type="submit" value="SUBMIT"> 
-    </form>
-    <!-- Bootstrap JS con Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+   <div class="contact-container">
+  <h1>Contact Me</h1>
+  <form action="submit" method="post">
+    <div class="mb-3">
+      <label for="Name" class="form-label">Name</label>
+      <input type="text" class="form-control custom-input" name="Name" id="Name" placeholder="Enter your name" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="Lastname" class="form-label">Lastname</label>
+      <input type="text" class="form-control custom-input" name="Lastname" id="Lastname" placeholder="Enter your lastname" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="ContactInformation" class="form-label">Contact Information</label>
+      <input type="text" class="form-control custom-input" name="ContactInformation" id="ContactInformation" placeholder="Email or phone" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="Message" class="form-label">Message</label>
+      <textarea class="form-control custom-input" name="Message" id="Message" rows="5" placeholder="Write your message here" required></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-custom">Submit</button>
+  </form>
+</div>
 
 </body>
 <footer style="background-color: #f0f0f0; padding: 20px; text-align: center;">

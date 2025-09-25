@@ -1,0 +1,96 @@
+//paleta de colores
+$primary-color: #ff99cc;
+$secondary-color: #cc99ff;
+$text-color: #fff;
+$color-3: #ffccff;
+$color-4: #99ffcc;
+
+
+
+//Asignación de colores 
+h1 {
+    color: $primary-color;
+}
+
+nav {
+ color:$secondary-color
+}
+
+//Color de botones con cambio diferenciado entre index y paginas con Mixin para el botón hamburguesa
+@mixin hamburger-button($bg-color) {
+  .navbar-toggler {
+    background-color: $bg-color;
+    border-radius: 12px;        
+    border: none;              
+    color: $text-color;         
+    font-weight: bold;          
+    padding: 0.25rem 0.75rem;
+
+    &:hover,
+    &:focus {
+      background-color: lighten($bg-color, 10%); // efecto hover
+      color: $text-color;
+    }
+
+    .navbar-toggler-icon {
+      filter: brightness(0) invert(1); 
+    }
+  }
+}
+
+// Estilos para index
+@include hamburger-button($secondary-color);
+
+// Estilos para páginas internas
+.pages {
+  @include hamburger-button($primary-color);
+}
+/*-------------------------------------------------
+Formulario de contacto con gradientes
+-------------------------------------------------*/
+.contact-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  background: linear-gradient(135deg, $color-3, $color-4); // gradiente diagonal
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+
+  h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: $secondary-color; // para que destaque sobre el fondo
+  }
+
+  .custom-input {
+    border-radius: 10px;
+    border: 2px solid lighten($color-4, 20%);
+    padding: 10px;
+    color: $text-color;
+    background-color: rgba(255,255,255,0.1); // ligera transparencia para ver gradiente
+
+    &:focus {
+      outline: none;
+      border-color: $color-4;
+      box-shadow: 0 0 8px $color-4;
+      background-color: rgba(255,255,255,0.2);
+    }
+  }
+
+  .btn-custom {
+    display: block;
+    width: 100%;
+    background: linear-gradient(135deg, $color-4, $color-3);
+    border: none;
+    border-radius: 12px;
+    color: $text-color;
+    font-weight: bold;
+    padding: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background: linear-gradient(135deg, lighten($color-4, 5%), lighten($color-3, 5%));
+    }
+  }
+}

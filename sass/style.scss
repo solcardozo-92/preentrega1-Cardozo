@@ -1,0 +1,251 @@
+// -----------------------------------
+// Paleta de colores pastel
+// -----------------------------------
+$primary-color: #ff99cc;    // rosa pastel
+$secondary-color: #cc99ff;  // lila pastel
+$text-color: #fff;
+$color-3: #ffccff;          // rosa claro
+$color-4: #99ffcc;          // verde menta
+$color-5: #bc4ed8;   //violeta
+$color-6: #000000; //negro
+
+
+//-----------------------------
+//Titulos
+//-----------------------------
+h1 { 
+  color: $color-6;
+font-weight: 600;}
+
+
+// -----------------------------------
+// NAVBAR con efecto glass y cambio de color
+// -----------------------------------
+.navbar {
+  background: rgba($primary-color, 0.5); // semi-transparente rosa
+  backdrop-filter: blur(12px);           
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 0.8rem 1rem;
+  transition: background 0.4s ease;
+
+  .nav-link {
+    color: $color-6!important;
+    font-weight: 600;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $color-4 !important; // verde menta al hover
+    }
+  }
+
+  // al hacer scroll o en páginas internas, cambia a lila
+  &.scrolled, &.pages {
+    background: rgba($secondary-color, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+}
+
+
+// -----------------------------------
+//Presentación Index
+// -----------------------------------
+.display-2--intro {
+  font-size: 2.5rem !important;      
+  color: #000000 !important;      
+  font-weight: bold !important;
+}
+
+.display-2--description {
+  display: block;       
+  margin-top: 1rem;    
+  font-size: 1.5rem;
+  color: $color-5;
+  line-height: 1.2;
+  font-weight: bold;
+}
+.intro-section {
+  padding-top: 180px;  // un poco más que la altura del navbar
+  color: #000;
+  min-height: 100vh;
+}
+// -----------------------------------
+// Botón hamburguesa con mixin
+// -----------------------------------
+@mixin hamburger-button($bg-color) {
+  .navbar-toggler {
+    background-color: $bg-color;
+    border-radius: 12px;        
+    border: none;              
+    color: $text-color;         
+    font-weight: bold;          
+    padding: 0.25rem 0.75rem;
+
+    &:hover,
+    &:focus {
+      background-color: lighten($bg-color, 10%);
+      color: $text-color;
+    }
+
+    .navbar-toggler-icon {
+      filter: brightness(0) invert(1); 
+    }
+  }
+}
+
+// -----------------------------------
+// Aplicación del mixin
+// -----------------------------------
+// Index: hamburguesa lila
+@include hamburger-button($secondary-color);
+
+// Otras páginas: hamburguesa rosa
+.pages {
+  @include hamburger-button($primary-color);
+}
+
+// -----------------------------------
+// Formulario de contacto con gradiente pastel
+// -----------------------------------
+.contact-container {
+  max-width: 800px;
+  width: 90%;
+  margin: 50px auto;
+  padding: 50px 30px;
+  background: linear-gradient(135deg, $color-3, $color-4);
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+
+  h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: $secondary-color;
+  }
+
+  .custom-input {
+    border-radius: 10px;
+    border: 2px solid lighten($color-4, 20%);
+    padding: 10px;
+    color: $text-color;
+text-shadow: #fff;
+    background-color: rgba(255,255,255,0.1);
+
+    &:focus {
+      outline: none;
+      border-color: $color-4;
+      box-shadow: 0 0 8px $color-4;
+      background-color: rgba(255,255,255,0.2);
+    }
+  }
+
+  .btn-custom {
+    display: block;
+    width: 100%;
+    background: linear-gradient(135deg, $color-4, $color-3);
+    border: none;
+    border-radius: 12px;
+    color: $color-6;
+    font-weight: bold;
+    padding: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background: linear-gradient(135deg, lighten($color-4, 5%), lighten($color-3, 5%));
+    }
+  }
+}
+
+// -----------------------------------
+// Botones principales del Portfolio
+// -----------------------------------
+.btn-rounded {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgb(0, 0, 0);                        
+  background: linear-gradient(135deg, $color-4, $color-3);  // verde menta → rosa claro
+  border: none;
+  border-radius: 50px;                
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+
+  span {                              
+    margin-left: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    background: linear-gradient(135deg, lighten($color-4, 5%), lighten($color-3, 5%));
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+}
+
+//--------------------------------------------------------
+//bio text
+//--------------------------------------------------------
+.bio-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; 
+  background: linear-gradient(135deg, $color-3, $color-4);
+  color: $color-6;
+  padding-top: 120px; // suficiente espacio desde navbar
+  padding-bottom: 50px;
+
+  .bio-title {
+    margin-top: 2rem;
+    text-align: left;
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem !important;
+    color: $color-6;
+  }
+
+  .bio-text1, p {
+    margin-top: 0;
+    color: $color-5;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    line-height: 1.4; 
+  }
+}
+
+.media-section {
+  padding-top: 180px;
+  padding-bottom: 80px;
+  min-height: 80vh;
+
+  .side-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+
+  .center-video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  }
+
+  @media (max-width: 768px) {
+    .side-image, .center-video {
+      max-width: 80%;
+      margin: auto;
+    }
+  }
+}

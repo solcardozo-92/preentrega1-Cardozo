@@ -1,0 +1,204 @@
+h1 {
+  color: #000000;
+  font-weight: 600;
+}
+
+.navbar {
+  background: rgba(255, 153, 204, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 0.8rem 1rem;
+  transition: background 0.4s ease;
+}
+.navbar .nav-link {
+  color: #000000 !important;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+.navbar .nav-link:hover {
+  color: #99ffcc !important;
+}
+.navbar.scrolled, .navbar.pages {
+  background: rgba(204, 153, 255, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.display-2--intro {
+  font-size: 2.5rem !important;
+  color: #000000 !important;
+  font-weight: bold !important;
+}
+
+.display-2--description {
+  display: block;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  color: #bc4ed8;
+  line-height: 1.2;
+  font-weight: bold;
+}
+
+.intro-section {
+  padding-top: 180px;
+  color: #000;
+  min-height: 100vh;
+}
+
+.navbar-toggler {
+  background-color: #cc99ff;
+  border-radius: 12px;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 0.25rem 0.75rem;
+}
+.navbar-toggler:hover, .navbar-toggler:focus {
+  background-color: rgb(229.5, 204, 255);
+  color: #fff;
+}
+.navbar-toggler .navbar-toggler-icon {
+  filter: brightness(0) invert(1);
+}
+
+.pages .navbar-toggler {
+  background-color: #ff99cc;
+  border-radius: 12px;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 0.25rem 0.75rem;
+}
+.pages .navbar-toggler:hover, .pages .navbar-toggler:focus {
+  background-color: rgb(255, 204, 229.5);
+  color: #fff;
+}
+.pages .navbar-toggler .navbar-toggler-icon {
+  filter: brightness(0) invert(1);
+}
+
+.contact-container {
+  max-width: 800px;
+  width: 90%;
+  margin: 50px auto;
+  padding: 50px 30px;
+  background: linear-gradient(135deg, #ffccff, #99ffcc);
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+.contact-container h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #cc99ff;
+}
+.contact-container .custom-input {
+  border-radius: 10px;
+  border: 2px solid white;
+  padding: 10px;
+  color: #fff;
+  text-shadow: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.contact-container .custom-input:focus {
+  outline: none;
+  border-color: #99ffcc;
+  box-shadow: 0 0 8px #99ffcc;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.contact-container .btn-custom {
+  display: block;
+  width: 100%;
+  background: linear-gradient(135deg, #99ffcc, #ffccff);
+  border: none;
+  border-radius: 12px;
+  color: #000000;
+  font-weight: bold;
+  padding: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.contact-container .btn-custom:hover {
+  background: linear-gradient(135deg, rgb(178.5, 255, 216.75), rgb(255, 229.5, 255));
+}
+
+.btn-rounded {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  background: linear-gradient(135deg, #99ffcc, #ffccff);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+.btn-rounded span {
+  margin-left: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+.btn-rounded:hover {
+  background: linear-gradient(135deg, rgb(178.5, 255, 216.75), rgb(255, 229.5, 255));
+  transform: translateY(-2px);
+}
+.btn-rounded:active {
+  transform: translateY(0px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.bio-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #ffccff, #99ffcc);
+  color: #000000;
+  padding-top: 120px;
+  padding-bottom: 50px;
+}
+.bio-section .bio-title {
+  margin-top: 2rem;
+  text-align: left;
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem !important;
+  color: #000000;
+}
+.bio-section .bio-text1, .bio-section p {
+  margin-top: 0;
+  color: #bc4ed8;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.media-section {
+  padding-top: 180px;
+  padding-bottom: 80px;
+  min-height: 80vh;
+}
+.media-section .side-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.media-section .center-video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 768px) {
+  .media-section .side-image, .media-section .center-video {
+    max-width: 80%;
+    margin: auto;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
